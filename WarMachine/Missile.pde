@@ -5,14 +5,12 @@ Also keeps state for its stroke width (which can 'breathe' by expanding and cont
 
 class Missile {
 
-  PVector origin;
-  PVector location;
-  PVector velocity;
+  private PVector origin, location, velocity;
 
-  color strokeColor;
-  float strokeThickness = 1;
-  boolean strokeIsExpanding = true; //used to animate the stroke's thickness
-  int breathRate = 1; //used to determine the rate of animated thickness
+  private color strokeColor;
+  private float strokeThickness = 1;
+  private boolean strokeIsExpanding = true; //used to animate the stroke's thickness
+  private int breathRate = 1; //used to determine the rate of animated thickness
 
   Missile() {
     
@@ -28,8 +26,7 @@ class Missile {
     breathRate = int (random(1, 10));
   } 
 
-
-  void update(float delta) {
+  public void update(float delta) {
     //move the missile 
     //could check to see if it is onscreen but just updating it might be computationally cheaper even.. 
     location.add(velocity);
@@ -56,7 +53,7 @@ class Missile {
     }
   }
 
-  void draw() {
+  public void draw() {
     strokeWeight(strokeThickness);
     stroke(strokeColor);
     line(origin.x, origin.y, location.x, location.y);
@@ -65,14 +62,15 @@ class Missile {
   }
   
 
-  float getX() {
+  public float getX() {
     return location.x;
   }
-  float getY() {
+  
+  public float getY() {
     return location.y;
   }
 
-  void setColor(color strokeColor) {
+  public void setColor(color strokeColor) {
     this.strokeColor = strokeColor;
   }
 }

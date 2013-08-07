@@ -83,7 +83,6 @@ class Rhizome {
       activeMissiles.add(new Missile());
     }
   }
-  
 
   public void destroyMissiles(float withinRadiusOf, float x, float y) {
     collisionZones.add(new Circle(x, y, withinRadiusOf));
@@ -92,7 +91,6 @@ class Rhizome {
 
   public void setColor(color someColor) {
     this.rhizomeColor = someColor;
-    
   }
 
   private class Circle {

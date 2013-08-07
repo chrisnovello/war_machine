@@ -6,6 +6,7 @@ chrisnovello.com
 2013 note:
 This is rough code that I wrote a few years back when I was learning to program. 
 I figure others might like to tinker with it, just be warned that my design is from when I was starting and is kind of clumsy. 
+It is halfway between overdesgined/encapsulated Java, and all-global-everything Processing spaghetti.
 
 You'll need the oscP5 library.
 http://www.sojamo.de/libraries/oscP5/

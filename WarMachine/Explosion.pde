@@ -4,11 +4,11 @@ Also starting to get additional draw modes, like rectangles that sample colors a
 */
 class Explosion {
 
-  float x, y, radius, maxRadius;
-  int growthRate = 2; //determines how fast the explosions grow&burst
+  private float x, y, radius, maxRadius;
+  private int growthRate = 2; //determines how fast the explosions grow&burst
 
-  color explosionColor = color(0);
-  int explosionDrawMode;
+  private color explosionColor = color(0);
+  private int explosionDrawMode;
 
   //modes
   public static final int RECTANGLES = 0;
@@ -23,7 +23,7 @@ class Explosion {
     radius = 0;
   }
 
-  void update(float delta) {
+  public void update(float delta) {
     if (delta % growthRate == 0) { //frame based for the moment.. move to time eventually
       if (radius <= maxRadius) {
         radius++;
@@ -31,7 +31,7 @@ class Explosion {
     }
   }
 
-  void draw(int drawMode) {
+  public void draw(int drawMode) {
 
     switch(drawMode) {
 

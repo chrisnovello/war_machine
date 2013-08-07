@@ -2,7 +2,7 @@
 //A loose effort to keep the OSC implementation out of the game models..
 class Broadcaster {
 
-  void aMissileExplodedAt(float x, float y) {
+  public void aMissileExplodedAt(float x, float y) {
     //Send an OSC message
     //Set X and Y for recently exploded missile
     OscMessage myMessage = new OscMessage("/"+name+"/ExplodedMissileX");
@@ -21,7 +21,7 @@ class Broadcaster {
     oscP5.send(myMessage, myRemoteLocation);
   } 
 
-  void sendOldestMissileCoordinates(float x, float y) {
+  public void sendOldestMissileCoordinates(float x, float y) {
     
     OscMessage myMessage = new OscMessage("/"+name+"/OldestMissileX");
     float scaled = map(x, 0, RES_WIDTH, 0.0, 1.0);

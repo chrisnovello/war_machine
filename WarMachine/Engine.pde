@@ -5,20 +5,20 @@
  Tells the rhizome to destroy missiles at explosion locations
  */
 class Engine {
-  City city; //a set of buildings and a crosshair
+  private City city; //a set of buildings and a crosshair
   final static int NUMBER_OF_BUILDINGS_IN_THE_CITY = 6;
 
-  Rhizome rhizome; //the dense nest of raining missiles
-  ArrayList<Explosion> explosions; //and the explosions that love them
+  private Rhizome rhizome; //the dense nest of raining missiles
+  private ArrayList<Explosion> explosions; //and the explosions that love them
   private boolean somethingExplodedLastPass = false;
 
-  int maxExplosionSize = 40; //when new explosions are created, what is the current explosion size that was set externally?
+  private int maxExplosionSize = 40; //when new explosions are created, what is the current explosion size that was set externally?
 
   //what draw mode is the game in? at the moment this only affects explosions but it could be nice to modify more broadly
-  int drawMode = 0;  
-  int numberOfDrawModes = 2;
+  private int drawMode = 0;  
+  private int numberOfDrawModes = 2;
   
-  color skyColor = color(133);
+  private color skyColor = color(133);
 
   Engine() {
     city = new City(width, height, NUMBER_OF_BUILDINGS_IN_THE_CITY);
